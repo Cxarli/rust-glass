@@ -1,0 +1,20 @@
+[package]
+name = "glass"
+version = "0.1.0"
+authors = ["Cxarli"]
+description = "Glass compiler"
+
+documentation = "https://github.com/Cxarli/rust-glass"
+homepage = "https://github.com/Cxarli/rust-glass"
+repository = "https://github.com/Cxarli/rust-glass"
+
+readme = "README.md"
+
+license = "MIT"
+
+[badges]
+
+travis-ci = { repository = "Cxarli/rust-glass" }
+
+[dependencies]
+regex = "^0"

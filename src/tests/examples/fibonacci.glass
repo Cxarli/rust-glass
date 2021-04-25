@@ -1,0 +1,69 @@
+{F
+  [f
+    '*/// console.log("start_f", $stack) /*'
+
+    (_a) A!
+    (_o) O!
+    (_this) $
+
+    '_n = pop()'
+    (_n) @=
+
+    '_isle = _n <= 2'
+    (_isle) (_n)* 2 (_a)(le).? =
+
+    '*/// console.log("pre_isle", $stack,  this._isle ? true : false) /*'
+
+    'if _isle { push(1); return; }'
+    /(_isle) 1^ \
+
+    '*/// console.log("post_isle", $stack) /*'
+
+    '_f(_n - 1)'
+    (_n)* 1 (_a)s.?
+    (_this)f.?
+
+    '_f(_n - 2)'
+    (_n)* 2 (_a)s.?
+    (_this)f.?
+
+    ' + '
+    (_a)a.?
+
+    '*/// console.log("end_f", $stack) /*'
+  ]
+}
+
+
+{M
+  [m
+    (_a) A!
+    (_f) F!
+    (_o) O!
+    (_n) 1=
+    (_nlm) 1=
+
+    /(_nlm)
+      '*/// console.log($stack) /*'
+
+      '_x = f(_n)'
+      (_n)* (_f)f.?
+      (_x) @=
+
+      'print(_x)'
+      (_x)* (_o)(on).?
+
+      'print(" ")'
+      " " (_o)o.?
+
+      '_n++'
+      (_n) (_n)* 1 (_a)a.? =
+
+      '_nlm = _n <= 20'
+      (_n)* <20> (_a)(le).?
+      (_nlm) @=
+    \
+
+    '*/// console.log($stack) /*'
+  ]
+}

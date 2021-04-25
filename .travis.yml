@@ -1,0 +1,22 @@
+language: rust
+
+cache: cargo
+
+os:
+  - linux
+
+rust:
+  - stable
+  - beta
+  - nightly
+
+before_script:
+  - ./clippy.sh install
+
+script:
+  - cargo test --verbose
+  - ./clippy.sh test
+
+#matrix:
+  #allow_failures:
+    #- rust: nightly
